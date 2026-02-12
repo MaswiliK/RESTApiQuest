@@ -94,7 +94,7 @@ You are literally playing an RPG through HTTP.
 
 ### Gameplay demo 
 
-![Demo](docs/1.png)
+![Demo](docs/Dungeon api demo.mp4)
 
 ---
 
