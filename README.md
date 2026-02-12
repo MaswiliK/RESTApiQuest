@@ -92,6 +92,10 @@ Use **VS Code + REST Client extension**.
 
 You are literally playing an RPG through HTTP.
 
+### Gameplay demo 
+
+![Demo](docs/1.png)
+
 ---
 
 ## 📡 Core Endpoints
