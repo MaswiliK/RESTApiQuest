@@ -1,4 +1,5 @@
-# 🐉 Dungeon Crawl RPG (Flask + SQLite) ![Python](https://img.shields.io/badge/python-3.10-blue)
+# 🐉 Dungeon Crawl RPG (Flask + SQLite) 
+![Python](https://img.shields.io/badge/python-3.10-blue)
 ![Flask](https://img.shields.io/badge/flask-2.3-green)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
