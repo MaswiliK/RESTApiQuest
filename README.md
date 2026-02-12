@@ -94,7 +94,11 @@ You are literally playing an RPG through HTTP.
 
 ### Gameplay demo 
 
-![Demo](docs/Dungeon api demo.mp4)
+<video width="640" controls>
+  <source src="docs/Dungeon%20api%20demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ---
 
