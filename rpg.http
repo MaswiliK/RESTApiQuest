@@ -1,0 +1,134 @@
+@base = http://127.0.0.1:5000
+@player_id = 1
+@save_id = 1
+
+### 1 Start Game
+
+POST {{base}}/start_game
+Content-Type: application/json
+
+{
+"name": "MK81",
+"dungeon_size": 5
+}
+
+### Save current game progress
+POST {{base}}/save/{{player_id}}
+Content-Type: application/json
+
+### Load a saved game
+POST {{base}}/load/{{save_id}}
+Content-Type: application/json
+
+
+### View all saves for a player
+GET {{base}}/saves/{{player_id}}
+Accept: application/json
+
+### 2 Move Player 
+
+POST {{base}}/move
+Content-Type: application/json
+
+{
+"player_id": "{{player_id}}",
+"direction": "east"
+}
+
+### 3 Fight
+
+POST {{base}}/fight
+Content-Type: application/json
+
+{
+"player_id": "{{player_id}}",
+"action": "attack"
+}
+
+### 4 Use Potion
+
+POST {{base}}/use_item
+Content-Type: application/json
+
+{
+"player_id": "{{player_id}}",
+"item": "healing_potion"
+}
+
+### 5 Status
+
+GET {{base}}/status?player_id={{player_id}}
+
+### 6 Map
+
+GET {{base}}/map?player_id={{player_id}}
+
+### 7 Leaderboard
+
+GET {{base}}/leaderboard
+
+### 9) Defend
+POST {{base}}/fight
+Content-Type: application/json
+
+{
+"player_id": "{{player_id}}",
+"action": "defend"
+}
+
+
+### 10) Run From Battle
+POST {{base}}/fight
+Content-Type: application/json
+
+
+{
+"player_id": "{{player_id}}",
+"action": "run"
+}
+
+
+### 11) Use Healing Potion
+POST {{base}}/use_item
+Content-Type: application/json
+
+
+{
+"player_id": "{{player_id}}",
+"item": "healing_potion"
+}
+
+
+### 12) Use Rusty Sword (equip / buff if implemented)
+POST {{base}}/use_item
+Content-Type: application/json
+
+
+{
+"player_id": "{{player_id}}",
+"item": "rusty_sword"
+}
+
+
+### 13) Check Status Again
+GET {{base}}/status?player_id={{player_id}}
+
+
+### 14) Leaderboard
+GET {{base}}/leaderboard
+
+
+### 15 Delete Character (New Game)
+
+POST {{base}}/delete_character
+Content-Type: application/json
+
+{
+  "player_id": "{{player_id}}"
+}
+
+
+# Tips:
+# - Move until you encounter a monster, then use Attack/Defend/Run.
+# - Boss room is expected at (4,4) when you reach level 5.
+# - If player_id is empty, run Start Game first.
