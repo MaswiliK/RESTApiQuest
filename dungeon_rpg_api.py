@@ -20,6 +20,7 @@ import uuid
 import json
 import random
 from datetime import datetime
+from flask import send_from_directory
 
 DB_PATH = 'dungeon.db'
 
@@ -557,8 +558,12 @@ def delete_character():
         "message": "Character deleted. New adventure can begin."
     })
 
+@app.route('/')
+def serve_ui():
+    return send_from_directory('static', 'dungeon-rpg-pwa.html')    
+
 # ---------------------- Main ----------------------
 if __name__ == '__main__':
     with app.app_context():
         init_db()
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000, host='0.0.0.0')
